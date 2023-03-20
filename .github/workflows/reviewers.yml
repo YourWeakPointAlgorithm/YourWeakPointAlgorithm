@@ -4,6 +4,7 @@ on:
     types: [opened, ready_for_review, reopened]
 jobs:
   auto-reviewer:
+    permissions: write-all
     name: Auto reviewer
     runs-on: ubuntu-latest
     steps:
