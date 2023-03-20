@@ -2,9 +2,7 @@
 
 [0106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 
-## 우수 풀이자 이름 - 해당 문제 푼 날짜
-
-박준범 - 2023. 03. 16
+## 박준범 - 2023. 03. 16
 1. 순회(Traversal)에 대한 설명.
     1. pre-order(전위 순회): root -> left -> right
     2. in-order(중위 순회): left -> root -> right
