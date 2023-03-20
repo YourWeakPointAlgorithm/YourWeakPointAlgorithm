@@ -1,8 +1,9 @@
-# 문제 번호. 문제 제목
+# 106. Construct Binary Tree from Inorder and Postorder Traversal
 
-[0106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+[106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 
-## 박준범 - 2023. 03. 16
+## 박준범 - 2023.03.16
+
 1. 순회(Traversal)에 대한 설명.
     1. pre-order(전위 순회): root -> left -> right
     2. in-order(중위 순회): left -> root -> right
@@ -43,4 +44,3 @@ class Solution {
 
 ---
 
-우수 풀이자가 또 나오는 경우 위에 우수 풀이자 이름 부터 구분선까지를 반복하면 됨
