@@ -4,8 +4,7 @@
 
 ## 박준범 - 2023.03.19
 
-1. 사용 알고리즘 기법: Trie & Queue
-    - 208. Implement Trie (Prefix Tree) 문제와 동일하게 진행합니다.
+1. 사용 알고리즘 기법: Trie & Queue => 208. Implement Trie (Prefix Tree) 문제와 동일하게 진행합니다.
     1. Queue에는 기본적으로 다음 문자에 해당하는 노드를 입력합니다.
     2. search 메소드에서 '.'을 문자로 입력되었을 때는 모든 자식노드를 Queue에 넣습니다.
 
