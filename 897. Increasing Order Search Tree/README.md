@@ -5,8 +5,7 @@
 ## 장세현 - 2023.03.22
 
 1. DFS 탐색을 하며 queue에 순서대로 값을 입력합니다.
-2. queue의 값을 바탕으로 새로운 TreeNode를 만듭니다.
-    여기서 dummy(TreeNode top)을 사용하였습니다.
+2. queue의 값을 바탕으로 새로운 TreeNode를 만듭니다. 여기서 dummy(TreeNode top)을 사용하였습니다.
 
 ```java
 class Solution {
