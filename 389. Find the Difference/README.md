@@ -1,6 +1,6 @@
 # 389. Find the Difference
 
-[Find the Difference](https://leetcode.com/problems/Find the Difference/)
+[Find the Difference](https://leetcode.com/problems/Find-the-Difference/)
 
 ## 이성종 - 2023.03.26
 
