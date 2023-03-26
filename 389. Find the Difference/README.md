@@ -1,28 +1,26 @@
-# 70. Climbing Stairs
+# 389. Find the Difference
 
-[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+[Find the Difference](https://leetcode.com/problems/Find the Difference/)
 
-## 이성종 - 2023.03.23
+## 이성종 - 2023.03.26
 
-1. n의 결과값은 n - 1 결과값 + n - 2 결과값 이므로 이전의 부분 문제의 결과를 저장하고 필요할 때마다 다시 연산하는 것이 아니라 이전의 결과를 사용하는 Dynamic Programming 을 사용했다.   
+1. map<char, int> 을 만들어서 문자열에 있는 문자를 key, 문자의 개수를 value로써 저장한다.
+2. 2번째 for문에서 문자열 t의 문자 개수만큼 mp의 value값을 -- 해준다.
+3. 새로 추가된 문자가 있다면 결국 value값은 -1이 되므로 해당 문자를 return 한다.
 
 ```cpp
 class Solution {
 public:
-    int climbStairs(int n) {
-        if(n <= 2) return n;
-
-        vector<int> dp(n + 1, -1);
-
-        return solve(n, dp);
-    }
-    int solve (int n, vector<int> &dp) {
-        if(n <= 2) return n;
-        if(dp[n] != -1) return dp[n];
-       
-        dp[n] = solve(n - 1, dp) + solve(n - 2, dp);
+    char findTheDifference(string s, string t) {
+        map<char, int> mp;
+  
+        for(char ch : s) mp[ch]++;
         
-        return dp[n];
+        for(char ch : t) {
+            if(--mp[ch] < 0) return ch;
+        }
+
+        return 'd';
     }
 };
 ```
