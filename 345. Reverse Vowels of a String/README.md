@@ -2,7 +2,7 @@
 
 [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/)
 
-## 김시현 - 2023. 3. 29.
+## 김시현 - 2023. 3. 29
 
 - String을 ArrayList로 변환해 사용
 
