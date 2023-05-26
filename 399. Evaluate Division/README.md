@@ -18,7 +18,6 @@ class Solution {
         int len = 0;
         HashMap<String, Integer> map = new HashMap<>();
         
-        /* create map & array */
         for(int i = 0; i < equations.size(); ++i) {
             List<String> equation = equations.get(i);
             
@@ -31,7 +30,6 @@ class Solution {
 
         valArr = new double[len];
         
-        /* link map & arrays */
         for(int i = 0; i < equations.size(); ++i) {
             List<String> equation = equations.get(i);
             
@@ -40,27 +38,26 @@ class Solution {
             if(valArr[idx2] != 0) flag += 1;
 
             switch(flag) {
-                case 0: // 0 0
+                case 0:
                     valArr[idx2] = 1;
                 
-                case 1: // 0 1
+                case 1:
                     valArr[idx1] = values[i] * valArr[idx2];
                     linkArr[idx1] = linkArr[idx2];
                     break;
                 
-                case 2: // 1 0
+                case 2:
                     valArr[idx2] = valArr[idx1] / values[i];
                     linkArr[idx2] = linkArr[idx1];
                     break;
                 
-                case 3: // 1 1
+                case 3:
                     double mul = valArr[idx2] * values[i] / valArr[idx1];
                     linkAll(idx1, idx2, mul);
                     break;
             }
         }
         
-        /* input result */
         for(int i = 0; i < queries.size(); ++i) {
             List<String> query = queries.get(i);
             String str1 = query.get(0), str2 = query.get(1);
