@@ -1,6 +1,6 @@
 # 705. Design HashSet
 
-[705. Design HashSet](https://leetcode.com/problems/design-hashset/)
+[Design HashSet](https://leetcode.com/problems/design-hashset/)
 
 ## 박지인 - 2023.05.30
 
