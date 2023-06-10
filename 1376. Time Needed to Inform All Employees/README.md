@@ -46,3 +46,44 @@ class Solution {
 ```
 
 ---
+
+## 박지인 - 2023.06.03
+
+- manager를 key, employee를 value로 map을 만들어서 tree를 구현
+- 이 후 dfs로 최대 시간을 구함
+
+```java
+class Solution {
+    HashMap<Integer, List<Integer>> map = new HashMap<>();
+    int[] times;
+    int result = 0;
+    public int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
+        if(n == 1) return 0;
+        
+        times = informTime;
+        
+        for(int i = 0; i < manager.length; i++) {
+            int m = manager[i];
+            if(m == -1) continue;
+            
+            if(!map.containsKey(m)) map.put(m, new ArrayList<>());
+            map.get(m).add(i);
+        }
+        
+        dfs(headID, times[headID]);
+        
+        return result;
+    }
+    
+    private void dfs(int node, int time) {
+        if(!map.containsKey(node)) {
+            result = Math.max(result, time);
+            return;
+        }
+        
+        for(var emp: map.get(node)) dfs(emp, time + times[emp]);
+    }
+}
+```
+
+---
