@@ -40,3 +40,44 @@ class Solution {
 ```
 
 ---
+## 이성종 - 2023.06.04
+
+- 인접리스트를 만들어 dfs로 탐색함.
+- dfs를 호출한 횟수가 곧 도시 집합의 개수.
+
+```cpp
+class Solution {
+public:
+    void dfs(int here, vector<bool>& visited, vector<int> adj[]) {
+        visited[here] = true;
+
+        for(int there : adj[here]) {
+            if(visited[there]) continue;
+            dfs(there, visited, adj);
+        }
+    }
+
+    int findCircleNum(vector<vector<int>>& isConnected) {
+        int size = isConnected.size(), cnt = 0;
+        vector<bool> visited(size, 0);
+        vector<int> adj[size];
+
+        for(int i = 0; i < size; i++) {
+            for(int j = 0; j < size; j++) {
+                if(isConnected[i][j]) adj[i].push_back(j);
+            }
+        }
+
+        for(int i = 0; i < size; i++) {
+            if(!visited[i]) {
+                dfs(i, visited, adj);
+                cnt++;
+            }
+        }
+
+        return cnt;
+    }
+};
+```
+
+---
